@@ -7,14 +7,19 @@
 </script>
 
 <style>
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 body {
   overflow-x: hidden;
   background-color: #FFFFFF;
-  font-family: Poppins;
+  font-family: 'Poppins';
 }
 
-.lamp-container {
+/* .lamp-container {
   background-color: black;
-}
-
+} */
 </style>

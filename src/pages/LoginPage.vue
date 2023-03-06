@@ -1,83 +1,81 @@
 <template>
-    <section id="login-screen">
-        <div class="row g-0">
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 form-area">
-                <div class="container">
-                    <img src="../assets/images/logo.png" class="logo" alt="Brand Logo">
-                    <div class="row pt-4">
-                        <div class="col-xl-8 offset-xl-2 col-lg-8 offset-lg-2 col-md-8 offset-md-2 col-sm-8 offset-sm-2">
-                            <h1 class="heading">Login</h1>
-                            <form class="py-3">
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                    <div class="input-container">
-                                        <input type="email" class="form-control" id="exampleInputEmail1"
-                                            placeholder="Email or username">
-                                    </div>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                                    <div class="input-container">
-                                        <input type="password" class="form-control"
-                                            id="exampleInputPassword1" placeholder="Password">
-                                        <i class="eye-icon"></i>
-                                    </div>
-                                </div>
-                                <div class="row mb-3 mx-4">
-                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 form-check sm-text">
-                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                        <label class="form-check-label" for="exampleCheck1">Remember me</label>
-                                    </div>
-                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 text-end sm-text">
-                                        <a href="">Forgot password</a>
-                                    </div>
-                                </div>
-                                <button @click="navigateToDashboard" type="submit" class="submit-btn">Login</button>
-                            </form>
-                            <div class="container sign-up">
-                                <p>Don't have an account? <span><a href="">Sign Up</a></span></p>
-                            </div>
-                            <div class="auth-options pt-2">
-                                <p><span>Or continue with</span></p>
-                            </div>
-                            <div class="container py-3">
-                                <div class="row text-center socials">
-                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
-                                        <a href="https://google.com">
-                                            <div class="socials-icon-container">
-                                                <img src="../assets/images/google.png" alt="Google">
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
-                                        <a href="https://facebook.com">
-                                            <div class="socials-icon-container">
-                                                <img src="../assets/images/facebook.png" alt="Facebook">
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
-                                        <a href="https://twitter.com">
-                                            <div class="socials-icon-container">
-                                                <img src="../assets/images/twitter.png" alt="Twitter">
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="conatiner text-center pt-3 terms">
-                                <p>By clicking the button above, you agree to our <span> <a href="">terms of us</a></span>
-                                    and <span><a href="">privacy policy</a></span></p>
-                            </div>
-                        </div>
-                    </div>
+  <section id="login-screen">
+    <div class="row g-0">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 form-area">
+        <div class="container">
+          <img src="../assets/images/logo.png" class="logo" alt="Brand Logo">
+          <div class="row pt-4">
+            <div class="col-xl-8 offset-xl-2 col-lg-8 offset-lg-2 col-md-8 offset-md-2 col-sm-8 offset-sm-2">
+              <h1 class="heading">Login</h1>
+              <form class="py-3">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <div class="input-container">
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email or username">
+                  </div>
                 </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <div class="input-container">
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <i class="eye-icon"></i>
+                  </div>
+                </div>
+                <div class="row mb-3 mx-4">
+                  <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 form-check sm-text">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                  </div>
+                  <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 text-end sm-text">
+                    <a href="">Forgot password</a>
+                  </div>
+                </div>
+                <button @click="navigateToDashboard" type="submit" class="submit-btn">Login</button>
+              </form>
+              <div class="container sign-up">
+                <p>Don't have an account? <span><a href="">Sign Up</a></span></p>
+              </div>
+              <div class="auth-options pt-2">
+                <p><span>Or continue with</span></p>
+              </div>
+              <div class="container py-3">
+                <div class="row text-center socials">
+                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                    <a href="https://google.com">
+                      <div class="socials-icon-container">
+                        <img src="../assets/images/google.png" alt="Google">
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                    <a href="https://facebook.com">
+                      <div class="socials-icon-container">
+                        <img src="../assets/images/facebook.png" alt="Facebook">
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                    <a href="https://twitter.com">
+                      <div class="socials-icon-container">
+                        <img src="../assets/images/twitter.png" alt="Twitter">
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="conatiner text-center pt-3 terms">
+                <p>By clicking the button above, you agree to our <span> <a href="">terms of us</a></span>
+                  and <span><a href="">privacy policy</a></span></p>
+              </div>
             </div>
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 hero-area">
-                <img src="../assets/images/hero-image.svg" class="" alt="">
-            </div>
+          </div>
         </div>
-    </section>
+      </div>
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 hero-area">
+        <img src="../assets/images/hero-image.svg" class="" alt="">
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>

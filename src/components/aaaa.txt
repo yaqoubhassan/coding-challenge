@@ -1,0 +1,349 @@
+<template>
+    <div>
+        <HeaderComponent />
+        <section>
+            <div class="row g-4">
+                <div class="col-xl-2 col-md-10" id="mainNavigation">
+                    <div class="text-center">
+                        <h3>MAIN NAVIGATION</h3>
+                    </div>
+                    <div class="side-bar">
+                        <ul class="side-menu">
+                            <li><a class="active" href="#">Dashboard</a></li>
+                            <li><a href="#">Farmers</a></li>
+                            <li><a href="#">Staff</a></li>
+                            <li><a href="#">Synchronization</a></li>
+                            <li><a href="#">Settings</a></li>
+                            <li><a href="#">Report</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="col-xl-10 col-md-10" id="mainContent">
+                    <div>
+                        <div class="card farmer-panel">
+                            <div class="card-body">
+                                <div class="agenda">
+                                    <div class="agenda-img-container">
+                                        <img src="../assets/images/agenda.png" alt="">
+                                    </div>
+                                    <div class="agenda-description">
+                                        <h3>Farmer's Panel</h3>
+                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam sit quia
+                                            inventore error hic doloremque?</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row gx-4 gy-4">
+                            <div class="col-xl-7 col-lg-7 col-md-7">
+                                <div class="row g-4">
+                                    <div class="col-xl-6 col-lg-6 col-md-6">
+                                        <div class="card percentage mb-3">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div style="width: 50%;">
+                                                        <span class="heading">Total earning</span>
+                                                    </div>
+                                                    <div class="info-img-container ms-auto">
+                                                        <img src="../assets/images/information.png" alt="">
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="card income">
+                                            <div class="card-body">
+                                                <div class="mb-3">
+                                                    <span style="font-size: 15px; color: #666666">Income</span>
+                                                </div>
+                                                <div class="total-inc">
+                                                    <h4>GH₵ 13,000</h4>
+                                                    <span style="color: #22A45D; font-size: 20px">+14%</span>
+                                                    <!-- <span class="ms-auto">+14%</span> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 revenue">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="total-inc" style="margin-bottom: 85px">
+                                                    <span style="font-size: 15px; font-weight: 600;">Revenue</span>
+                                                    <h4 style="margin-bottom: -1px;">GH₵
+                                                        13,000</h4>
+                                                </div>
+                                                <div style="height: 150px; width: 100%;">
+                                                    <Line :data="chartData2" :options="chartOptions2" width="100%" />
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-xl-5 col-lg-5 col-md-5 total-earning">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div style="width: 50%;">
+                                                <span class="heading">Total earning</span>
+                                            </div>
+                                            <div class="info-img-container ms-auto">
+                                                <img src="../assets/images/information.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <span style="font-size: 12px; color: #22A45D">36% ^</span>
+                                        </div>
+                                        <div class="text-start" style="margin-bottom: 35px">
+                                            <span style="font-size: 12px; color: #666666">April</span>
+                                        </div>
+                                        <div style="height: 150px; width: 100%;">
+                                            <Bar :data="chartData1" :options="chartOptions1" width="100%" />
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</template>
+
+
+<script>
+import HeaderComponent from '../components/Header.vue'
+import { Bar, Line } from 'vue-chartjs'
+// import Chart from '../components/Chart.vue'
+import { Chart as ChartJS, Title, PointElement, Tooltip, LineElement, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js'
+
+ChartJS.register(Title, PointElement, Tooltip, Legend, LineElement, BarElement, CategoryScale, LinearScale)
+
+export default {
+    name: 'Chart',
+    components: {
+        HeaderComponent,
+        Bar,
+        Line
+        // appChart: Chart
+    },
+    data() {
+        return {
+            chartData1: {
+                labels: ['1d', '2d', '3d', '4d', '5d', '6d', '7d', '8d', '9d', '10d', '11d', '12d', '13d', '14d', '15d', '16d', '17d', '18d', '19d', '20d', '21d'],
+                datasets: [
+                    {
+                        label: 'Fully Rounded',
+                        data: [9, 10, 3, 5, 2, 3, 4, 7, 6, 1, 4, 8, 5, 6, 3, 8, 4, 10, 9, 5, 8],
+                        borderColor: '#195ff7',
+                        backgroundColor: '#195ff7',
+                        borderWidth: 2,
+                        borderRadius: Number.MAX_VALUE,
+                        borderSkipped: false,
+                        barPercentage: 0.5,
+                        barThickness: 10,
+                    }
+                ]
+            },
+            chartOptions1: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: false,
+                    },
+                    // title: {
+                    //     display: true,
+                    //     text: '36%  ^',
+                    //     color: '#22A45D'
+                    // }
+                }
+            },
+            chartData2: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+                datasets: [
+                    {
+                        label: 'Data One',
+                        backgroundColor: '#7d1aee',
+                        borderColor: '#7d1aee',
+                        data: [20, 23, 12, 17, 9, 4, 11],
+                        pointStyle: 'circle',
+                        pointRadius: 10,
+                        cubicInterpolationMode: 'monotone',
+                        tension: 0.4
+                    }
+                ]
+            },
+            chartOptions2: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: false,
+                    },
+                    // title: {
+                    //     display: true,
+                    //     text: '36%  ^',
+                    //     color: '#22A45D'
+                    // }
+                },
+                // scales: {
+                //     yAxes: [{
+                //         gridLines: {
+                //             drawBorder: false,
+                //         },
+                //     }]
+                // },
+            },
+        }
+    }
+}
+</script>
+
+<style scoped>
+#mainNavigation {
+    padding: 40px 20px;
+    max-height: 100%;
+    background-color: #FFFFFF;
+    z-index: 1;
+}
+
+#mainNavigation h3 {
+    font-size: 25px;
+    color: #22A45D;
+    font-weight: 600;
+}
+
+#mainContent {
+    background-color: #F2F4F6;
+    /* background-color: #7d1aee; */
+    height: 100%;
+    padding: 30px 60px 10px 40px;
+}
+
+.side-bar {
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+.side-menu {
+    list-style: none;
+}
+
+.side-menu li {
+    padding: 5px 0px 0px 10px
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+a:hover {
+    color: #22A45D;
+}
+
+a.active {
+    color: #22A45D;
+}
+
+.card.farmer-panel {
+    padding: 30px 0px 20px 40px;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.agenda {
+    display: flex;
+}
+
+.agenda-img-container {
+    height: 80px;
+    width: 80px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.agenda-img-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.agenda-description {
+    margin-left: 40px;
+    padding-top: 10px;
+}
+
+.agenda-description h3,
+.income h4,
+.total-inc h4 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.agenda-description p {
+    font-size: 15px;
+    color: #666666;
+}
+
+.farmer-panel {
+    margin-bottom: 20px;
+}
+
+.total-earning {
+    height: 300px;
+    max-height: 300px;
+}
+
+.total-earning .card {
+    border: none;
+    height: 100%;
+}
+
+.total-earning .heading {
+    color: #666666;
+    font-size: 15px;
+}
+
+.info-img-container {
+    width: 45px;
+    height: 45px;
+}
+
+.info-img-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.te-container {
+    display: flex;
+}
+
+.total-inc {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.revenue {
+    height: 300px;
+    max-height: 300px;
+}
+
+.revenue .card {
+    height: 100%;
+}
+</style>

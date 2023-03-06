@@ -1,0 +1,86 @@
+<template>
+    <div class="">
+        <h3>MAIN NAVIGATION</h3>
+    </div>
+    <div class="side-bar">
+        <ul class="side-menu">
+            <!-- <li><a class="active" href="#"><i class="fa fa-gauge"></i>Dashboard</a></li> -->
+            <router-link class="nav-link" to="/dashboard" active-class="active"><a><i
+                        class="fa fa-gauge"></i>Dashboard</a></router-link>
+            <!-- <li><a href="#"><i class="fa fa-light fa-users"></i>Farmers</a></li> -->
+            <router-link class="nav-link" to="/dashboard/farmers" active-class="active"><a><i
+                        class="fa fa-light fa-users"></i>Farmers</a></router-link>
+            <router-link class="nav-link" to="/dashboard/farmers" active-class="active"><a><i
+                        class="fa fa-solid fa-user-nurse"></i>Staff</a></router-link>
+            <router-link class="nav-link" to="/dashboard/farmers" active-class="active"><a><i
+                        class="fa fa-solid fa-rotate"></i>Synchronization</a></router-link>
+            <router-link class="nav-link" to="/dashboard/farmers" active-class="active"><a><i
+                        class="fa fa-solid fa-gears"></i>Settings</a></router-link>
+            <router-link class="nav-link" to="/dashboard/farmers" active-class="active"><a><i
+                        class="fa fa-thin fa-folder-open"></i>Report</a></router-link>
+            <!-- <li><a href="#"><i class="fa fa-solid fa-user-nurse"></i>Staff</a></li> -->
+            <!-- <li><a href="#"><i class="fa fa-solid fa-rotate"></i>Synchronization</a></li> -->
+            <!-- <li><a href="#"><i class="fa fa-solid fa-gears"></i>Settings</a></li> -->
+            <!-- <li><a href="#"><i class="fa fa-thin fa-folder-open"></i>Report</a></li> -->
+        </ul>
+    </div>
+</template>
+
+<style scoped>
+.side-bar {
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+.side-menu {
+    list-style: none;
+}
+
+.nav-link {
+    padding: 20px 0px 0px 10px;
+    margin: 5px 0;
+}
+
+.side-menu a {
+    text-decoration: none;
+    color: #000000;
+}
+
+a:hover,
+i:hover {
+    color: #22A45D;
+}
+
+a.active {
+    color: #22A45D;
+}
+
+h3 {
+    font-size: 25px;
+    color: #22A45D;
+    font-weight: 600;
+}
+
+.fa {
+    font-size: 25px;
+    margin-right: 15px;
+    color: #666666;
+}
+
+.active .fa {
+    color: #22A45D;
+}
+
+
+@media screen and (max-width: 1300px) {
+    li {
+        font-size: 0px;
+        padding: 15px 10px 0px 0px;
+    }
+
+    h3 {
+        display: none;
+    }
+
+}
+</style>
