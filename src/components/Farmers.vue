@@ -65,60 +65,51 @@
                     <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
                         <form>
                             <div class="row g-3">
-                                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 form-area">
+                                <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 form-area">
                                     <div class="row g-3">
                                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                             <label for="exampleInputEmail1" class="form-label">First Name</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                                aria-describedby="emailHelp">
+                                            <input type="text" class="form-control">
                                         </div>
                                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                             <label for="exampleInputEmail1" class="form-label">Last Name</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                                aria-describedby="emailHelp">
+                                            <input type="text" class="form-control">
                                         </div>
                                     </div>
                                     <div class="row g-3">
                                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                             <label for="exampleInputEmail1" class="form-label">Birth Place</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                                aria-describedby="emailHelp">
+                                            <input type="text" class="form-control">
                                         </div>
                                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                             <label for="exampleInputEmail1" class="form-label">Date of Birth</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                                aria-describedby="emailHelp">
+                                            <input type="date" class="form-control">
                                         </div>
                                     </div>
                                     <div class="row g-3">
                                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                             <label for="exampleInputEmail1" class="form-label">House Number</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                                aria-describedby="emailHelp">
+                                            <input type="text" class="form-control">
                                         </div>
                                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                             <label for="exampleInputEmail1" class="form-label">Community</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                                aria-describedby="emailHelp">
+                                            <input type="text" class="form-control">
                                         </div>
                                     </div>
                                     <div class="row g-3">
                                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                             <label for="exampleInputEmail1" class="form-label">Occupation</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                                aria-describedby="emailHelp">
+                                            <input type="text" class="form-control">
                                         </div>
                                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                             <label for="exampleInputEmail1" class="form-label">District</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                                aria-describedby="emailHelp">
+                                            <input type="email" class="form-control">
                                         </div>
                                     </div>
                                     <div class="row g-3">
                                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                             <label for="exampleInputEmail1" class="form-label">Region</label>
-                                            <select type="email" class="form-control form-select" id="exampleInputEmail1"
-                                                aria-describedby="emailHelp">
+                                            <select type="text" class="form-control form-select">
                                                 <option selected>Open this select menu</option>
                                                 <option value="1">One</option>
                                                 <option value="2">Two</option>
@@ -127,12 +118,11 @@
                                         </div>
                                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                             <label for="exampleInputEmail1" class="form-label">Marital Status</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                                aria-describedby="emailHelp">
+                                            <input type="text" class="form-control">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
                                     <div class="mb-3">
                                         <label for="exampleFormControlTextarea1" class="form-label">Bio</label>
                                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
@@ -140,6 +130,13 @@
                                     </div>
 
                                 </div>
+                            </div>
+                            <div class="row">
+                                <div class="text-end form-btn">
+                                    <button class="reset-btn">Reset</button>
+                                    <button class="save-btn">Save</button>
+                                </div>
+
                             </div>
                         </form>
                     </div>
@@ -150,6 +147,36 @@
 </template>
 
 <style scoped>
+.form-btn button {
+    border-radius: 10px;
+    padding: 5px 30px;
+    font-size: 12px;
+}
+
+.reset-btn {
+    margin-right: 15px;
+    border: none;
+    background-color: #22A45D;
+    color: #FFFFFF;
+    border: 2px solid #22A45D;
+}
+
+.save-btn {
+    background-color: transparent;
+    border: 2px solid #22A45D;
+}
+
+.save-btn:hover {
+    background-color: #054221;
+    color: #FFFFFF;
+    border: 2px solid #054221;
+}
+
+.reset-btn:hover {
+    background-color: #054221;
+    border: 2px solid #054221;
+}
+
 input,
 select {
     border-radius: 4px;
