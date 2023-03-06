@@ -1,18 +1,46 @@
 <template>
     <section id="header">
         <header>
-            <nav class="navbar navbar-expand-lg py-2 px-5 fixed-top">
+            <nav class="navbar navbar-expand-lg fixed-top">
                 <div class="container-fluid">
-
                     <a class="navbar-brand" href="#"><img class="first-logo" src="../assets/images/logo.png" alt=""></a>
                     <a class="navbar-brand" href="#"><img class="second-logo" src="../assets/images/logo2.png" alt=""></a>
 
-                    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                        aria-controls="offcanvasExample">
                         <span class="navbar-toggler-icon"></span>
-                    </button> -->
+                    </button>
 
-                    <div class="navbar-collapse" id="navbarNav">
+                    <div class="collapse offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                        data-bs-dismiss="offcanvas" aria-labelledby="offcanvasExampleLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasExampleLabel"
+                                style="color: #22A45D; font-size: 30px; font-weight: 600;">
+                                MAIN NAVIGATION
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <div style="display: flex; flex-direction: column;">
+                                <RouterLink class="nav-link fa fa-gauge" to="/dashboard"> <span>Dashboard</span>
+                                </RouterLink>
+                                <RouterLink class="nav-link fa fa-light fa-users" to="/dashboard/farmers">
+                                    <span>Farmers</span>
+                                </RouterLink>
+                                <RouterLink class="nav-link fa fa-solid fa-user-nurse" to="/"><span>Staff</span>
+                                </RouterLink>
+                                <RouterLink class="nav-link fa fa-solid fa-rotate" to="/"><span>Synchronization</span>
+                                </RouterLink>
+                                <RouterLink class="nav-link fa fa-solid fa-gears" to="/"><span>Settings</span>
+                                </RouterLink>
+                                <RouterLink class="nav-link fa fa-thin fa-folder-open" to="/"><span>Report</span>
+                                </RouterLink>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="navbar-collapse">
                         <ul class="navbar-nav ms-auto">
 
                             <li class="nav-item">
@@ -56,6 +84,7 @@
 .navbar {
     background-color: #FAFBFC;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    padding: 10px 20px;
 }
 
 .first-logo {
@@ -145,9 +174,34 @@
     font-size: 15px
 }
 
+.nav-link {
+    padding: 20px 0px 0px 20px;
+    margin: 5px 10px;
+    padding-right: 50px;
+    color: #666666;
+}
+
+.nav-link span {
+    font-family: 'Poppins';
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.nav-link:hover {
+    color: #22A45D;
+}
+
+a.router-link-exact-active {
+    color: #22A45D;
+}
+
 @media screen and (max-width: 1200px) {
     .navbar-brand {
         display: none;
+    }
+
+    .navbar-expand-lg .navbar-toggler {
+        display: block;
     }
 
     .search-container {
@@ -182,5 +236,41 @@
         font-size: 12px;
     }
 
+}
+
+@media (max-width: 992px) {
+    .navbar-expand-lg .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+    }
+
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: row;
+    }
+
+    .profile-container {
+        margin-right: 0px;
+    }
+
+    .user-name,
+    .profile-container span {
+        display: none;
+    }
+
+
+    .language-container {
+        margin-right: 20px;
+    }
+
+    .navbar {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .navbar-expand-lg .navbar-toggler {
+        display: none;
+    }
 }
 </style>

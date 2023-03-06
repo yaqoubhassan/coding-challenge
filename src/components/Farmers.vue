@@ -183,7 +183,8 @@ select {
 }
 
 input:focus,
-select:focus {
+select:focus,
+textarea:focus {
     border: 2px solid #22A45D;
     box-shadow: none;
 }
@@ -234,6 +235,7 @@ select:focus {
     padding: 5px;
     margin-left: auto !important;
     margin-right: auto !important;
+    margin-bottom: 5px;
 }
 
 .cam-container img,

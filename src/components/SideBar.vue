@@ -21,9 +21,9 @@
     font-size: 20px;
 }
 
-.side-menu {
+/* .side-menu {
     list-style: none;
-}
+} */
 
 .nav-link {
     padding: 20px 0px 0px 20px;
