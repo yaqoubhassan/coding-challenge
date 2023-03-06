@@ -3,6 +3,10 @@
         <div class="card">
             <div class="card-header">
                 <h4>Personal Details</h4>
+                <button class="navbar-toggler" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                    aria-controls="offcanvasExample">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <ul class="nav">
                     <li class="nav-item">
                         <a class="first nav-link" aria-current="page" href="#">Item one</a>
@@ -110,10 +114,10 @@
                                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                             <label for="exampleInputEmail1" class="form-label">Region</label>
                                             <select type="text" class="form-control form-select">
-                                                <option selected>Open this select menu</option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
+                                                <option selected>Greater Accra</option>
+                                                <option value="1">Region 1</option>
+                                                <option value="2">Region 2</option>
+                                                <option value="3">Region 3</option>
                                             </select>
                                         </div>
                                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
@@ -262,6 +266,11 @@ textarea:focus {
     margin-right: 15px
 }
 
+.nav-link:hover {
+    text-decoration: underline 2px #22A45D;
+    text-underline-offset: 24px;
+}
+
 .first {
     margin-left: -18px;
 }
@@ -308,5 +317,11 @@ h4 {
 .icon-caption {
     color: #666666;
     font-size: 15px;
+}
+
+@media screen and (max-width: 682px) {
+    .nav {
+        display: none;
+    }
 }
 </style>
