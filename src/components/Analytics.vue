@@ -41,7 +41,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <div class="total-inc">
-                                        <span>Revenue</span>
+                                        <span style="color: #000000">Revenue</span>
                                         <h4 style="margin-bottom: -1px;">GH₵
                                             13,000</h4>
                                     </div>
