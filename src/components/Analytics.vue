@@ -66,7 +66,7 @@
                                     <span class="heading">Total earning</span>
                                 </div>
                                 <div class="info-img-container ms-auto">
-                                    <img src="../assets/images/information.png" alt="">
+                                    <img src="../assets/information.png" alt="">
                                 </div>
                             </div>
                             <div class="text-center">
@@ -89,19 +89,19 @@
                     <div class="card-body">
                         <div style="display: flex; justify-content: flex-end;" class="big-card-icons">
                             <div>
-                                <img src="../assets/images/zoom-out.png" alt="Zoom-Out">
+                                <img src="../assets/zoom-out.png" alt="Zoom-Out">
                             </div>
                             <div>
-                                <img src="../assets/images/zoom-in.png" alt="Zoom-Out">
+                                <img src="../assets/zoom-in.png" alt="Zoom-Out">
                             </div>
                             <div>
-                                <img src="../assets/images/palm-of-hand.png" alt="Zoom-Out">
+                                <img src="../assets/palm-of-hand.png" alt="Zoom-Out">
                             </div>
                             <div>
-                                <img src="../assets/images/home.png" alt="Zoom-Out">
+                                <img src="../assets/home.png" alt="Zoom-Out">
                             </div>
                             <div>
-                                <img src="../assets/images/menu.png" alt="Zoom-Out">
+                                <img src="../assets/menu.png" alt="Zoom-Out">
                             </div>
                         </div>
                         <div>

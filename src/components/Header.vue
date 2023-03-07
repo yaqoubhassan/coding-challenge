@@ -3,14 +3,13 @@
         <header>
             <nav class="navbar navbar-expand-lg fixed-top">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#"><img class="first-logo" src="../assets/images/logo.png" alt=""></a>
-                    <a class="navbar-brand" href="#"><img class="second-logo" src="../assets/images/logo2.png" alt=""></a>
+                    <a class="navbar-brand" href="#"><img class="first-logo" src="../assets/logo.png" alt=""></a>
+                    <a class="navbar-brand" href="#"><img class="second-logo" src="../assets/logo2.png" alt=""></a>
 
                     <button @click="checkUrl" class="toggler" data-bs-toggle="offcanvas" href="#offcanvasExample"
                         role="button" aria-controls="offcanvasExample" type="button" title="toggler">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <!-- <button id="yaqoub">Click</button> -->
                     <div class="collapse mycanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
                         aria-labelledby="offcanvasExampleLabel">
                         <div class="offcanvas-header">
@@ -24,7 +23,7 @@
                             <div style="display: flex; flex-direction: column;">
                                 <RouterLink class="nav-link fa fa-gauge" to="/dashboard"> <span>Dashboard</span>
                                 </RouterLink>
-                                <RouterLink class="nav-link fa fa-light fa-users" to="/dashboard/farmers">
+                                <RouterLink class="nav-link fa fa-light fa-users" to="/dashboard/profile">
                                     <span>Farmers</span>
                                 </RouterLink>
                                 <RouterLink class="nav-link fa fa-solid fa-user-nurse" to="/"><span>Staff</span>
@@ -54,25 +53,25 @@
 
                             <li class="nav-item">
                                 <div class="search-container">
-                                    <img class="search-icon" src="../assets/images/search.png" alt="">
+                                    <img class="search-icon" src="../assets/search.png" alt="">
                                 </div>
                             </li>
 
                             <li class="nav-item">
                                 <div class="lamp-container">
-                                    <img class="lamp-icon" src="../assets/images/lamp2.png" alt="">
+                                    <img class="lamp-icon" src="../assets/lamp2.png" alt="">
                                 </div>
                             </li>
 
                             <li class="nav-item">
                                 <div class="language-container">
-                                    <img class="language-icon" src="../assets/images/language.png" alt="">
+                                    <img class="language-icon" src="../assets/language.png" alt="">
                                 </div>
                             </li>
 
                             <li class="nav-item">
                                 <div class="profile-container" style="display: flex">
-                                    <img class="profile-image" src="../assets/images/profile-image.jpg" alt="">
+                                    <img class="profile-image" src="../assets/profile-image.jpg" alt="">
                                     <div class="container ms-4 py-1" style="line-height: 10px;">
                                         <h4 class="user-name">Kwame Anim</h4>
                                         <span>Farmer</span>

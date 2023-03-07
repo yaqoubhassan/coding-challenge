@@ -31,19 +31,19 @@
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
                         <div class="text-center">
                             <div class="img-container mb-3">
-                                <img src="../assets/images/profile-image.jpg" alt="">
+                                <img src="../assets/profile-image.jpg" alt="">
                             </div>
                             <div class="container d-flex py-3">
                                 <div class="container">
                                     <div class="cam-container">
-                                        <img src="../assets/images/camera.png" alt="">
+                                        <img src="../assets/camera.png" alt="">
                                     </div>
                                     <span class="icon-caption">Take a photo</span>
                                 </div>
 
                                 <div class="container">
                                     <div class="upload-container">
-                                        <img src="../assets/images/upload.png" alt="">
+                                        <img src="../assets/upload.png" alt="">
                                     </div>
                                     <span class="icon-caption">Upload photo</span>
                                 </div>

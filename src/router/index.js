@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import LoginPage from '../pages/LoginPage.vue'
 import Dashboard from '../pages/Dashboard.vue'
 import Analytics from '../components/Analytics.vue'
-import Farmers from '../components/Farmers.vue'
+import Profile from '../components/Profile.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -18,7 +18,7 @@ const router = createRouter({
         default: Dashboard
       }, children: [
         { path: '', name: 'dashboard', component: Analytics },
-        { path: 'farmers', component: Farmers }
+        { path: 'profile', component: Profile }
       ]
     },
     {

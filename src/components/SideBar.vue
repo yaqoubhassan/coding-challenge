@@ -6,7 +6,7 @@
         <ul class="side-menu">
             <RouterLink class="nav-link fa fa-gauge" to="/dashboard"> <span>Dashboard</span>
             </RouterLink>
-            <RouterLink class="nav-link fa fa-light fa-users" to="/dashboard/farmers"><span>Farmers</span></RouterLink>
+            <RouterLink class="nav-link fa fa-light fa-users" to="/dashboard/profile"><span>Farmers</span></RouterLink>
             <RouterLink class="nav-link fa fa-solid fa-user-nurse" to="/"><span>Staff</span></RouterLink>
             <RouterLink class="nav-link fa fa-solid fa-rotate" to="/"><span>Synchronization</span></RouterLink>
             <RouterLink class="nav-link fa fa-solid fa-gears" to="/"><span>Settings</span></RouterLink>

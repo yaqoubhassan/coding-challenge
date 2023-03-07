@@ -3,7 +3,7 @@
         <div class="card-body">
             <div class="agenda">
                 <div class="agenda-img-container">
-                    <img src="../assets/images/agenda.png" alt="">
+                    <img src="../assets/agenda.png" alt="">
                 </div>
                 <div class="agenda-description">
                     <h3>Farmer's Panel</h3>

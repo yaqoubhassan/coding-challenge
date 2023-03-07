@@ -3,7 +3,7 @@
     <div class="row g-0">
       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 form-area">
         <div class="container">
-          <img src="../assets/images/logo.png" class="logo" alt="Brand Logo">
+          <img src="../assets/logo.png" class="logo" alt="Brand Logo">
           <div class="row pt-4">
             <div class="col-xl-8 offset-xl-2 col-lg-8 offset-lg-2 col-md-8 offset-md-2 col-sm-8 offset-sm-2">
               <h1 class="heading">Login</h1>
@@ -43,21 +43,21 @@
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
                     <a href="https://google.com">
                       <div class="socials-icon-container">
-                        <img src="../assets/images/google.png" alt="Google">
+                        <img src="../assets/google.png" alt="Google">
                       </div>
                     </a>
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
                     <a href="https://facebook.com">
                       <div class="socials-icon-container">
-                        <img src="../assets/images/facebook.png" alt="Facebook">
+                        <img src="../assets/facebook.png" alt="Facebook">
                       </div>
                     </a>
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
                     <a href="https://twitter.com">
                       <div class="socials-icon-container">
-                        <img src="../assets/images/twitter.png" alt="Twitter">
+                        <img src="../assets/twitter.png" alt="Twitter">
                       </div>
                     </a>
                   </div>
@@ -72,7 +72,7 @@
         </div>
       </div>
       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 hero-area">
-        <img src="../assets/images/hero-image.svg" class="" alt="">
+        <img src="../assets/hero-image.svg" class="" alt="">
       </div>
     </div>
   </section>
@@ -132,7 +132,7 @@ export default {
 }
 
 .eye-icon {
-  background-image: url('../assets/images/hide.png');
+  background-image: url('../assets/hide.png');
   position: absolute;
   width: 20px;
   height: 20px;
@@ -246,6 +246,7 @@ export default {
   margin-left: -40px;
 }
 
+
 @media screen and (max-width: 992px) {
   .hero-area {
     display: none
@@ -253,6 +254,8 @@ export default {
 
   .form-area {
     width: 100%;
+    height: 100vh;
+    border-radius: 0px;
   }
 }
 

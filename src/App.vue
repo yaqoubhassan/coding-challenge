@@ -7,11 +7,11 @@
 </script>
 
 <style>
-*,
+/* *,
 *:before,
 *:after {
   box-sizing: border-box;
-}
+} */
 
 body {
   overflow-x: hidden;
