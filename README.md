@@ -28,6 +28,6 @@ npm run dev
 npm run build
 ```
 
-### To See Page's Responsiveness
+## To See Page's Responsiveness
 
 Kindly minimize and resize the screen
