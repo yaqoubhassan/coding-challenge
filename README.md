@@ -28,6 +28,10 @@ npm run dev
 npm run build
 ```
 
-## To See Page's Responsiveness
+## Some Simple Instructions to Explore all Features
 
-Kindly minimize and resize the screen
+Kindly minimize and resize the screen to see the page's responsiveness to different screen sizes
+
+On the login screen, click the login button to see the dashboard screen.
+
+And on the dashboard screen, click the "farmers" menu item to view the profile page
