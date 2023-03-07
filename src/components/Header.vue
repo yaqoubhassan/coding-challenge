@@ -6,19 +6,19 @@
                     <a class="navbar-brand" href="#"><img class="first-logo" src="../assets/images/logo.png" alt=""></a>
                     <a class="navbar-brand" href="#"><img class="second-logo" src="../assets/images/logo2.png" alt=""></a>
 
-                    <button class="navbar-toggler" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
-                        aria-controls="offcanvasExample">
+                    <button @click="checkUrl" class="toggler" data-bs-toggle="offcanvas" href="#offcanvasExample"
+                        role="button" aria-controls="offcanvasExample" type="button" title="toggler">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-
-                    <div class="collapse offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
-                        data-bs-dismiss="offcanvas" aria-labelledby="offcanvasExampleLabel">
+                    <!-- <button id="yaqoub">Click</button> -->
+                    <div class="collapse mycanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                        aria-labelledby="offcanvasExampleLabel">
                         <div class="offcanvas-header">
                             <h5 class="offcanvas-title" id="offcanvasExampleLabel"
                                 style="color: #22A45D; font-size: 30px; font-weight: 600;">
                                 MAIN NAVIGATION
                             </h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            <button type="button" class="btn-close dismiss" id="dismiss" aria-label="Close"></button>
                         </div>
                         <div class="offcanvas-body">
                             <div style="display: flex; flex-direction: column;">
@@ -35,7 +35,16 @@
                                 </RouterLink>
                                 <RouterLink class="nav-link fa fa-thin fa-folder-open" to="/"><span>Report</span>
                                 </RouterLink>
-
+                            </div>
+                            <hr>
+                            <div v-if="subMenu" class="subMenu">
+                                <ul class="subMenu-list">
+                                    <li><a href="">Item One</a></li>
+                                    <li><a class="active" href="">Item Two</a></li>
+                                    <li><a href="">Item Three</a></li>
+                                    <li><a href="">Item Four</a></li>
+                                    <li><a href="">Item Five</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -79,6 +88,43 @@
         </header>
     </section>
 </template>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    var dismissButton = document.getElementById("dismiss");
+    var canvas = document.getElementById('offcanvasExample');
+    dismissButton.addEventListener('click', myFunction)
+    function myFunction() {
+        canvas.classList.add("hiding")
+    }
+
+    var screen = document.getElementById("offcanvasExample");
+    var canvasScreen = document.getElementById('offcanvasExample');
+    screen.addEventListener('click', secondFunction)
+    function secondFunction() {
+        canvasScreen.classList.add("hiding")
+    }
+})
+export default {
+    data() {
+        return {
+            subMenu: false,
+            showCanvas: true
+        }
+    },
+    methods: {
+        checkUrl() {
+            if (this.$route.path === '/dashboard/farmers') {
+                this.subMenu = true
+            } else {
+                this.subMenu = false
+            }
+        },
+    }
+}
+
+</script>
 
 <style scoped>
 .navbar {
@@ -195,13 +241,126 @@ a.router-link-exact-active {
     color: #22A45D;
 }
 
-@media screen and (max-width: 1200px) {
-    .navbar-brand {
+.subMenu-list a {
+    text-decoration: none;
+    color: #666666;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.subMenu-list a:hover {
+    color: #22A45D;
+}
+
+.subMenu-list a.active {
+    color: #22A45D;
+}
+
+.subMenu-list li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.toggler {
+    padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
+    font-size: var(--bs-navbar-toggler-font-size);
+    line-height: 1;
+    color: var(--bs-navbar-color);
+    background-color: transparent;
+    border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
+    border-radius: var(--bs-navbar-toggler-border-radius);
+    transition: var(--bs-navbar-toggler-transition);
+}
+
+.mycanvas {
+    --bs-offcanvas-zindex: 1045;
+    --bs-offcanvas-width: 400px;
+    --bs-offcanvas-height: 30vh;
+    --bs-offcanvas-padding-x: 1rem;
+    --bs-offcanvas-padding-y: 1rem;
+    --bs-offcanvas-color: var(--bs-body-color);
+    --bs-offcanvas-bg: var(--bs-body-bg);
+    --bs-offcanvas-border-width: var(--bs-border-width);
+    --bs-offcanvas-border-color: var(--bs-border-color-translucent);
+    --bs-offcanvas-box-shadow: 0 0.125rem 0.25rem rgba(var(--bs-body-color-rgb), 0.075);
+    --bs-offcanvas-transition: transform 0.3s ease-in-out;
+    --bs-offcanvas-title-line-height: 1.5;
+}
+
+.mycanvas.show:not(.hiding),
+.mycanvas.showing {
+    transform: none;
+}
+
+.mycanvas.hiding,
+.mycanvas.show,
+.mycanvas.showing {
+    visibility: visible;
+}
+
+.mycanvas.offcanvas-start {
+    top: 0;
+    left: 0;
+    width: var(--bs-offcanvas-width);
+    border-right: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
+    transform: translateX(-100%);
+}
+
+.mycanvas {
+    position: fixed;
+    bottom: 0;
+    z-index: var(--bs-offcanvas-zindex);
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    color: var(--bs-offcanvas-color);
+    visibility: hidden;
+    background-color: var(--bs-offcanvas-bg);
+    background-clip: padding-box;
+    outline: 0;
+    transition: var(--bs-offcanvas-transition);
+}
+
+@media (min-width: 1200px) {
+
+
+    .navbar-expand-lg .offcanvas {
+        position: static;
+        z-index: auto;
+        flex-grow: 1;
+        width: auto !important;
+        height: auto !important;
+        visibility: visible !important;
+        background-color: transparent !important;
+        border: 0 !important;
+        transform: none !important;
+        transition: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .navbar-expand-lg .toggler {
         display: none;
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: row;
+    }
+
+    .navbar-expand-lg .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
     }
 
     .navbar-expand-lg .navbar-toggler {
         display: block;
+    }
+
+    .navbar-brand {
+        display: none;
     }
 
     .search-container {
@@ -218,7 +377,6 @@ a.router-link-exact-active {
         width: 40px;
         text-align: center;
         justify-content: center;
-        /* padding: 7px 5px 8px 5px; */
     }
 
     .profile-container {
@@ -239,15 +397,6 @@ a.router-link-exact-active {
 }
 
 @media (max-width: 992px) {
-    .navbar-expand-lg .navbar-collapse {
-        display: flex !important;
-        flex-basis: auto;
-    }
-
-    .navbar-expand-lg .navbar-nav {
-        flex-direction: row;
-    }
-
     .profile-container {
         margin-right: 0px;
     }
@@ -265,12 +414,6 @@ a.router-link-exact-active {
     .navbar {
         padding-left: 0px;
         padding-right: 0px;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .navbar-expand-lg .navbar-toggler {
-        display: none;
     }
 }
 </style>
