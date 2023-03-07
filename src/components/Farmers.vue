@@ -113,7 +113,7 @@
                                     <div class="row g-3">
                                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                             <label for="exampleInputEmail1" class="form-label">Region</label>
-                                            <select type="text" class="form-control form-select">
+                                            <select class="form-control form-select">
                                                 <option selected>Greater Accra</option>
                                                 <option value="1">Region 1</option>
                                                 <option value="2">Region 2</option>
