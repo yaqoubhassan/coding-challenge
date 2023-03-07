@@ -370,7 +370,6 @@ export default {
     .total-inc h4 {
         font-size: 15px;
         font-weight: 600;
-        /* color: red */
     }
 
     .cash h4 {
