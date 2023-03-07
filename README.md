@@ -27,3 +27,7 @@ npm run dev
 ```sh
 npm run build
 ```
+
+### To See Page's Responsiveness
+
+Kindly minimize and resize the screen
